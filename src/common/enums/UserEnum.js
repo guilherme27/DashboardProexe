@@ -1,0 +1,3 @@
+const UserEnum = Object.freeze({
+    
+})
