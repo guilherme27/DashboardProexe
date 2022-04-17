@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 
-import UpdateService from "../../services/UpdateService"
-import Table from "./../../components/Table/Table"
+import Table from "../../components/Table/Table"
+import styles from './styles';
 
 const Home = () => {
 
     return (
-        <div className="">
+        <div style={styles.container}>
             <h2>Dashboard</h2>
             <Table></Table>
         </div>

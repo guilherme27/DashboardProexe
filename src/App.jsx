@@ -1,10 +1,9 @@
-import Home from './pages/home/Home'
+import Routers from './routers/Routers'
+
 function App() {
   return (
-    <div className="App">
-      <Home/>
-    </div>
+    <Routers />
   );
-}
+} 
 
 export default App;
