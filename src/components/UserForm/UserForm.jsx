@@ -12,25 +12,24 @@ export default function Home() {
     const params = useParams();
     const navigate = useNavigate();
 
-    let user = {}
-
+    
     const [id, setId] = useState("");
     const [name, setName] = useState("");
     const [username, setUsername] = useState("");
     const [city, setCity] = useState("");
     const [email, setEmail] = useState("");
     const [errors, setErrors] = useState({});
-
+    
     useEffect(() => {
         if (params.id) {
-            user = UserService().getUsers().find((user) => parseInt(params.id) === user.id);
-            setId(parseInt(user.id));
+            const user = UserService().getUsers().find((user) => parseInt(params.id) === user.id);
+            setId(Number(user.id));
             setName(user.name);
             setUsername(user.username);
             setCity(user.city);
             setEmail(user.email);
         }
-    }, []);
+    }, [params]);
 
     const saveUser = () => {
         const users = UserService().getUsers();
